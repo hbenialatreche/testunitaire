@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplier par 2</title>
+</head>
+<body>
+    <h1>Multiplier un nombre par 2</h1>
+    <label for="numberInput">Entrez un nombre :</label>
+    <input type="number" id="numberInput">
+    <button onclick="multiplier()">Multiplier</button>
+    <p id="result"></p>
+
+    <script>
+        function multiplier() {
+            const inputElement = document.getElementById('numberInput');
+            const resultElement = document.getElementById('result');
+            const inputValue = parseFloat(inputElement.value);
+            
+            if (!isNaN(inputValue)) {
+                const result = inputValue * 2;
+                resultElement.textContent = `Le résultat de la multiplication par 2 est : ${result}`;
+            } else {
+                resultElement.textContent = "Veuillez entrer un nombre valide.";
+            }
+        }
+    </script>
+</body>
+</html>
